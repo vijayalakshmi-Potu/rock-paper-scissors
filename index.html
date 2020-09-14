@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Skill Safari | Rock paper scissors</title>
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+  <script defer="" src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+    integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous">
+  </script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+
+</head>
+<body>
+  <div class="container mt-5">
+
+    <header class="d-flex align-items-center justify-space-between p-3">
+      <div class="logo">
+        <img src="images/logo.svg" alt="gameLogo" class="img-fluid gameLogo">
+      </div>
+      <div class="score px-5 py-1 ml-auto flex-column">
+        <div class="score-heading">
+          <p class="text-center mb-0">SCORE</p>
+        </div>
+        <div class="score-value">
+          <p id="score" class="text-center m-0">0</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="options align-items-center" id="options">
+      <button class="btn btn-circle btn-paper select" name="button" data-choice="paper">
+        <span class="select-options">
+          <img src="images/icon-paper.svg" alt="paper">
+        </span>
+      </button>
+      <button class="btn btn-circle btn-scissors select" name="button" data-choice="scissors">
+        <span class="select-options">
+          <img src="images/icon-scissors.svg" alt="scissors">
+        </span>
+      </button>
+      <button class="btn btn-circle btn-rock select" name="button" data-choice="rock">
+        <span class="select-options">
+          <img src="images/icon-rock.svg" alt="rock">
+        </span>
+      </button>
+    </div>
+
+      <button type="button" class="btn btn-outline btn-rules" data-toggle="modal" data-target="#rulesModal">
+        RULES
+      </button>
+
+      <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="rulesModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="rulesModalLabel">RULES</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center my-2">
+              <img src="images/image-rules.svg" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+      </br>
+      </br>
+
+      <div class="result" id="result">
+        <div class="d-flex align-items-center">
+          <div class="user-choice" id="user-section">
+            <h3 class="text-center mb-2">YOU PICKED</h3>
+            <button class="btn btn-circle-big btn-paper text-center" id="user-selected">
+              <span class="select-options">
+                <img src="images/icon-paper.svg" class="img-fluid" alt="paper">
+              </span>
+            </button>
+          </div>
+          <div class="winner-desktop align-items-center text-center" id="result-section">
+            <h2 id="win-lose"></h2>
+            <button class="btn btn-light" id="play-again" name="button">PLAY AGAIN</button>
+          </div>
+          <div class="computer-choice" id="computer-section">
+            <h3 class="text-center">THE HOUSE PICKED</h3>
+            <button class="btn btn-circle-big btn-paper text-center" id="computer-selected">
+              <span class="select-options">
+                <img src="images/icon-paper.svg" alt="paper">
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+</script>  
+<script src="JS/script.js"></script>
+</body>
+</html>
